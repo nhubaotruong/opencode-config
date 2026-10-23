@@ -1,0 +1,12 @@
+{
+  "compactSkillGuidance": true,
+  "skillCompressionMinCount": 4,
+  "skillRemovalPolicy": "keep",
+  "deterministicToolOrder": true,
+  "warnOnPrefixChange": true,
+  "promptCacheKey": true,
+  "affinityHeaders": ["x-session-id", "conversation_id"],
+  "promptCacheRetention": null,
+  "providersAllow": [],
+  "providersDeny": []
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "lsp": {
+    "tailwindcss": {
+      "command": ["tailwindcss-language-server", "--stdio"],
+      "extensions": [".ts", ".tsx", ".js", ".jsx", ".css", ".html"]
+    },
+    "css": {
+      "command": ["vscode-css-language-server", "--stdio"],
+      "extensions": [".css", ".scss", ".less"]
+    },
+    "html": {
+      "command": ["vscode-html-language-server", "--stdio"],
+      "extensions": [".html"]
+    },
+    "kotlin": {
+      "command": ["kotlin-language-server"],
+      "extensions": [".kt", ".kts"]
+    },
+    "pyright": {
+      "command": ["ty", "server"],
+      "extensions": [".py", ".pyi"]
+    },
+    "json": {
+      "command": ["vscode-json-language-server", "--stdio"],
+      "extensions": [".json", ".jsonc"]
+    },
+    "markdown": {
+      "command": ["vscode-markdown-language-server", "--stdio"],
+      "extensions": [".md", ".markdown"]
+    },
+    "eslint": {
+      "command": ["vscode-eslint-language-server", "--stdio"],
+      "extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs"]
+    },
+    "bash": {
+      "command": ["bash-language-server", "start"],
+      "extensions": [".sh", ".bash", ".zsh"]
+    },
+    "yaml": {
+      "command": ["yaml-language-server", "--stdio"],
+      "extensions": [".yaml", ".yml"]
+    },
+    "mdx": {
+      "command": ["mdx-language-server", "--stdio"],
+      "extensions": [".mdx"]
+    },
+    "marksman": {
+      "command": ["marksman", "server"],
+      "extensions": [".md"]
+    },
+    "dockerfile": {
+      "command": ["docker-langserver", "--stdio"],
+      "extensions": ["Dockerfile", ".dockerfile"]
+    }
+  },
+  "formatter": true,
+  "plugins": [
+    "billion-context",
+    "compound-engineering@git+https://github.com/EveryInc/compound-engineering-plugin.git",
+    "cc-safety-net@latest",
+    "@dietrichgebert/ponytail@latest",
+    "@lifangjin/opencode-session-title-plugin@latest",
+    "opencode-goal-plugin@latest",
+    "@openchamber/opencode-claude@1.4.2"
+  ],
+  "compaction": {
+    "auto": false
+  },
+  "model": "ollama-cloud/deepseek-v4.1-flash:1017#max",
+  "agents": {
+    "plan": {
+      "model": "ollama-cloud/deepseek-v4.1-flash:1017#max"
+    },
+    "goal": {
+      "model": "ollama-cloud/deepseek-v4.1-flash:1017#max"
+    },
+    "title": {
+      "model": "opencode/big-pickle"
+    }
+  },
+  "disabled_providers": [
+    "amazon-bedrock"
+  ],
+  "websearch": {
+    "provider": "random"
+  },
+  "mcp": {
+    "bili": {
+      "type": "local",
+      "command": [
+        "node",
+        "/var/home/linuxbrew/.linuxbrew/lib/node_modules/billion-context/dist/mcp.js"
+      ],
+      "enabled": true
+    }
+  },
+  "experimental": {
+    "todo": true
+  }
+}

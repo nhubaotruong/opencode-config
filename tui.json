@@ -1,0 +1,5 @@
+{
+  "plugin": [
+    "file:///var/home/nhubao/.config/opencode/plugins/orca-opencode-status-tui/tui.js"
+  ]
+}

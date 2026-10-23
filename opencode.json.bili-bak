@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "lsp": true,
+  "formater": "true",
+  "plugins": [
+    "billion-context",
+    "compound-engineering@git+https://github.com/EveryInc/compound-engineering-plugin.git",
+    "cc-safety-net@latest",
+    "opencode-snip@next",
+    "dietrichgebert/ponytail",
+    "@openchamber/opencode-claude@1.4.2"
+  ],
+  "compaction": {
+    "auto": false
+  },
+  "disabled_providers": [
+    "amazon-bedrock"
+  ],
+  "websearch": {
+    "provider": "random"
+  }  
+}
