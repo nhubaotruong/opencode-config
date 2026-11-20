@@ -1,5 +1,10 @@
 {
+  "$schema": "https://opencode.ai/tui.json",
   "plugin": [
     "file:///var/home/nhubao/.config/opencode/plugins/orca-opencode-status-tui/tui.js"
-  ]
+  ],
+  "keybinds": {
+    "agent_cycle": "shift+tab",
+    "agent_cycle_reverse": ""
+  }
 }

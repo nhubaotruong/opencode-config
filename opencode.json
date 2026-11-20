@@ -52,6 +52,10 @@
     "dockerfile": {
       "command": ["docker-langserver", "--stdio"],
       "extensions": ["Dockerfile", ".dockerfile"]
+    },
+    "dart": {
+      "command": ["dart", "language-server"],
+      "extensions": [".dart"]
     }
   },
   "formatter": true,
@@ -62,18 +66,19 @@
     "@dietrichgebert/ponytail@latest",
     "@lifangjin/opencode-session-title-plugin@latest",
     "opencode-goal-plugin@latest",
-    "@openchamber/opencode-claude@1.4.2"
+    "@openchamber/opencode-claude@1.4.2",
+    "opencode-cmd-provider"
   ],
   "compaction": {
-    "auto": false
+    "auto": true
   },
-  "model": "ollama-cloud/deepseek-v4.1-flash:1017#max",
+  "model": "ollama-cloud/deepseek-v4.1-flash:1017#high",
   "agents": {
     "plan": {
       "model": "ollama-cloud/deepseek-v4.1-flash:1017#max"
     },
     "goal": {
-      "model": "ollama-cloud/deepseek-v4.1-flash:1017#max"
+      "model": "ollama-cloud/deepseek-v4.1-flash:1017#high"
     },
     "title": {
       "model": "opencode/big-pickle"
@@ -84,16 +89,6 @@
   ],
   "websearch": {
     "provider": "random"
-  },
-  "mcp": {
-    "bili": {
-      "type": "local",
-      "command": [
-        "node",
-        "/var/home/linuxbrew/.linuxbrew/lib/node_modules/billion-context/dist/mcp.js"
-      ],
-      "enabled": true
-    }
   },
   "experimental": {
     "todo": true
